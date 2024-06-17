@@ -279,7 +279,7 @@ async def baseprivate(c: Client, m: Message):
             if lang is None:
                 await m.reply_text("◍ لايوجد محظورين عام\n√")
             else:
-                t = "\n◍ قائمة المحظورين عام \n≪━━━━━━━crezu━━━━━━≫\n"
+                t = "\n◍ قائمة المحظورين عام \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n"
                 for row in lang:
                     t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
                 await m.reply_text(t, parse_mode=enums.ParseMode.MARKDOWN)
@@ -303,7 +303,7 @@ async def baseprivate(c: Client, m: Message):
             if lang is None:
                 await m.reply_text("◍ لا يوجد مكتومين عام\n√")
             else:
-                t = "\n◍ قائمة الكتم العام \n≪━━━━━━━crezu━━━━━━≫\n"
+                t = "\n◍ قائمة الكتم العام \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n"
                 for row in lang:
                     t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
                 await m.reply_text(t, parse_mode=enums.ParseMode.MARKDOWN)
@@ -351,7 +351,7 @@ async def baseprivate(c: Client, m: Message):
                                        f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n"
                                    "لا يوجد مطورين مرفوعين\n√", parse_mode=enums.ParseMode.MARKDOWN)
             else:
-                t = "\n◍ قائمة المطورين \n≪━━━━━━━crezu━━━━━━≫\n" + f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" + \
+                t = "\n◍ قائمة المطورين \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n" + f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" + \
                     f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
                 for row in lang:
                     t = t + f"[{row[1]}](tg://user?id={row[0]})\n"

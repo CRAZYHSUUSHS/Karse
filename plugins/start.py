@@ -1,8 +1,3 @@
-#𝙲𝙷.𝚂𝙾𝚄𝚁𝙲𝙴 : @l2_2Y
-#𝙳𝙴𝚅 𝙰𝙱𝙳𝙾𝚘 : @II_U_6
-#𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
-#𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅
-
 from pyrogram import Client, filters, enums
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, Message, ReplyKeyboardMarkup,\
     KeyboardButton
@@ -19,41 +14,41 @@ async def startsudo(c: Client, m: Message):
         t = """💌╖اهلا بيك حبيبي آلمـطـور
 ⚙️╢ تقدر تتحكم باوامر البوت عن طريق
 🔍╢ الكيبورد اللي ظهرلك تحت ↘
-🔰╜ للدخول لقناة السورس [دوس هنا](t.me/CH_CRAZ)"""
+🔰╜ للدخول لقناة السورس [دوس هنا](t.me/l2_2Y)"""
         keyboard = ReplyKeyboardMarkup(keyboard=[
-            [KeyboardButton(" قفل الكيبورد ‌✯")],
-            [KeyboardButton("تعطيل التواصل ‌✯")] +
-            [KeyboardButton("تفعيل التواصل ‌✯")],
-            [KeyboardButton("تعطيل الاذاعه ‌✯")] +
-            [KeyboardButton("تفعيل الاذاعه ‌✯")],
-            [KeyboardButton("تعطيل اليوتيوب ‌✯")] +
-            [KeyboardButton("تفعيل اليوتيوب ‌✯")],
-            [KeyboardButton("المطورين ‌✯")],
-            [KeyboardButton("اذاعه خاص ‌✯")] +
-            [KeyboardButton("اذاعه بالمجموعات ‌✯")],
-            [KeyboardButton("اذاعه بالتوجيه خاص ‌✯")] +
-            [KeyboardButton("اذاعه بالتوجيه للمجموعات ⁦️⁩‌✯")],
-            [KeyboardButton("اذاعه موجهه بالتثبيت⁦️⁩ ‌✯")] +
-            [KeyboardButton("اذاعه بالتثبيت ‌✯")],
-            [KeyboardButton("الاحصائيات ‌✯")],
-            [KeyboardButton("المشتركين ‌✯")] +
-            [KeyboardButton("الجروبات ‌✯")],
-            [KeyboardButton("حذف الاعضاء الفيك ‌✯")] +
-            [KeyboardButton("حذف الجروبات الفيك ‌✯")],
-            [KeyboardButton("حذف رد عام ‌✯")] +
-            [KeyboardButton("اضف رد عام ‌✯")],
-            [KeyboardButton("الردود العامه ‌✯")],
-            [KeyboardButton("قائمه الكتم العام ‌✯")] +
-            [KeyboardButton("قائمه الحظر العام ‌✯")],
-            [KeyboardButton("ضع اسم للبوت ‌✯")],
-            [KeyboardButton("معلومات السيرفر ‌✯")] +
-            [KeyboardButton("سرعه السيرفر ‌✯")],
-            [KeyboardButton("جلب نسخه احتياطيه اساسيه ‌✯")],
-            [KeyboardButton("رفع نسخه احتياطيه ‌✯")],
-            [KeyboardButton("الاصدار ‌✯")] +
-            [KeyboardButton("تحديث السورس ‌✯")],
-            [KeyboardButton("رستر البوت ‌✯")],
-            [KeyboardButton("الغاء ‌✯")],
+            [KeyboardButton(" قفل الكيبورد")],
+            [KeyboardButton("تعطيل التواصل")] +
+            [KeyboardButton("تفعيل التواصل")],
+            [KeyboardButton("تعطيل الاذاعه")] +
+            [KeyboardButton("تفعيل الاذاعه")],
+            [KeyboardButton("تعطيل اليوتيوب")] +
+            [KeyboardButton("تفعيل اليوتيوب")],
+            [KeyboardButton("المطورين")],
+            [KeyboardButton("اذاعه خاص")] +
+            [KeyboardButton("اذاعه بالمجموعات")],
+            [KeyboardButton("اذاعه بالتوجيه خاص")] +
+            [KeyboardButton("اذاعه بالتوجيه للمجموعات")],
+            [KeyboardButton("اذاعه موجهه بالتثبيت⁦️⁩")] +
+            [KeyboardButton("اذاعه بالتثبيت")],
+            [KeyboardButton("الاحصائيات")],
+            [KeyboardButton("المشتركين")] +
+            [KeyboardButton("الجروبات")],
+            [KeyboardButton("حذف الاعضاء الفيك")] +
+            [KeyboardButton("حذف الجروبات الفيك")],
+            [KeyboardButton("حذف رد عام")] +
+            [KeyboardButton("اضف رد عام")],
+            [KeyboardButton("الردود العامه")],
+            [KeyboardButton("قائمه الكتم العام")] +
+            [KeyboardButton("قائمه الحظر العام")],
+            [KeyboardButton("ضع اسم للبوت")],
+            [KeyboardButton("معلومات السيرفر")] +
+            [KeyboardButton("سرعه السيرفر")],
+            [KeyboardButton("جلب نسخه احتياطيه اساسيه")],
+            [KeyboardButton("رفع نسخه احتياطيه")],
+            [KeyboardButton("الاصدار")] +
+            [KeyboardButton("تحديث السورس")],
+            [KeyboardButton("رستر البوت")],
+            [KeyboardButton("الغاء")],
         ],
             resize_keyboard=True,
             one_time_keyboard=False
@@ -68,11 +63,11 @@ async def startsudo(c: Client, m: Message):
 async def start(c: Client, m: Message):
     await confirm_user(c, m)
     if m.chat.type == enums.ChatType.PRIVATE:
-        botname = get_db_botname() or "كريزي"
+        botname = get_db_botname() or "بودا"
         x = f"""
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 🎤╖ أهلآ بك عزيزي أنا بوت {botname}
-⚙️╢لتفعيل كيب الاعضاء اضغط /Crazy 
+⚙️╢لتفعيل كيب الاعضاء اضغط /AbdoX 
 🫧╢ وظيفتي حماية المجموعات
 ✅╢ لتفعيل البوت عليك اتباع مايلي 
 🔘╢ أضِف البوت إلى مجموعتك
@@ -90,11 +85,11 @@ async def start(c: Client, m: Message):
 
 @Client.on_callback_query(filters.regex("^start_back$"))
 async def start_back(c: Client, m: CallbackQuery):
-    botname = get_db_botname() or "القائد"
+    botname = get_db_botname() or "بودا"
     x = f"""
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 🎤╖ أهلآ بك عزيزي أنا بوت {botname}
-⚙️╢لتفعيل كيب الاعضاء اضغط /Crazy 
+⚙️╢لتفعيل كيب الاعضاء اضغط /AbdoX 
 🫧╢ وظيفتي حماية المجموعات
 ✅╢ لتفعيل البوت عليك اتباع مايلي 
 🔘╢ أضِف البوت إلى مجموعتك
@@ -108,12 +103,14 @@ async def start_back(c: Client, m: CallbackQuery):
 
 
 @Client.on_callback_query(filters.regex("^infos$"))
-   res = """
-╭──── • ◈ • ────╮
-么 [SoUrCe](t.me/CH_CRAZ)
-么 [GrOuP](t.me/CRA_NL)
-╰──── • ◈ • ────╯
-⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+async def infos(c: Client, m: CallbackQuery):
+    res = """
+╭──── • 𖥻 • ────╮
+𖥻 [SoUrCe BoDa](t.me/l2_2Y)
+𖥻 [GrOuP SoUrCe](t.me/CVCVCVUI)
+𖥻 [DeV SoUrCe](t.me/II_U_6)
+╰──── • 𖥻 • ────╯
+𖥻 WelCoMe To SoUrCe BoDa Music .
         """
     keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("« عوده", callback_data="start_back")]])
     await m.message.edit_text(res, reply_markup=keyboard, disable_web_page_preview=True, parse_mode=enums.ParseMode.MARKDOWN)
@@ -122,7 +119,3 @@ async def start_back(c: Client, m: CallbackQuery):
 @Client.on_callback_query(filters.regex("^commandss$"))
 async def commandsss(c: Client, m: CallbackQuery):
     await command2(c, m)
-#𝙲𝙷.𝚂𝙾𝚄𝚁𝙲𝙴 : @l2_2Y
-#𝙳𝙴𝚅 𝙰𝙱𝙳𝙾𝚘 : @II_U_6
-#𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
-#𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅

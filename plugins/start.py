@@ -106,7 +106,7 @@ async def start_back(c: Client, m: CallbackQuery):
 async def infos(c: Client, m: CallbackQuery):
     res = """
 ╭──── • 𖥻 • ────╮
-𖥻 [SoUrCe BoDa](t.me/CH_CRAZ)
+𖥻 [SoUrCe](t.me/CH_CRAZ)
 𖥻 [GrOuP SoUrCe](t.me/CH_CRAZ)
 𖥻 [DeV SoUrCe](t.me/CRA_NL)
 ╰──── • 𖥻 • ────╯

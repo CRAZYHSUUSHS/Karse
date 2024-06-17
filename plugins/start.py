@@ -109,26 +109,11 @@ async def start_back(c: Client, m: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("^infos$"))
    res = """
-
-
-╭──── • ‌✯ • ────╮
-
-
-𖥻 [SoUrCe BoDa](t.me/CH_CRAZ)
-
-
-𖥻 [G SoUrCe](t.me/CRA_NL)
-
-
-𖥻 [DeV SoUrCe](t.me/CRAZ_UP)
-
-
-╰──── • ‌✯ • ────╯
-
-
-𖥻 WelCoMe To SoUrCe  Music .
-
-
+╭──── • ◈ • ────╮
+么 [SoUrCe](t.me/CH_CRAZ)
+么 [GrOuP](t.me/CRA_NL)
+╰──── • ◈ • ────╯
+⍟ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
         """
     keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("« عوده", callback_data="start_back")]])
     await m.message.edit_text(res, reply_markup=keyboard, disable_web_page_preview=True, parse_mode=enums.ParseMode.MARKDOWN)

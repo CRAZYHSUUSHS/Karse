@@ -1,0 +1,33 @@
+{
+    "name": "SOURCE BODA",
+    "description": "سورس  حمايه خاص بي بودا️",
+    "logo": "https://telegra.ph/file/451bcefcc59fcfffa07b8.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "mongodb",
+    "Group-Manager-bot",
+    "pyrogram"
+    ],
+    "website": "https://t.me/I2_2Y",
+    "success_url": "https://t.me/CVCVCVUI",
+    "stack": "container",
+    "env": {
+        "TOKEN": {
+            "description": "ضع توكن بوتك  @BotFather",
+            "required": true
+        },
+        "SESSION": {
+            "description": "حط جلسة البايروجرام",
+            "required": true
+        },
+        "sudoers": {
+            "description": "حط ايدي مطور البوت",
+            "required": true
+        }
+    }
+}
+
+
+

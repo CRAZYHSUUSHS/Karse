@@ -3,6 +3,7 @@
 #𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
 #𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅
 
+
 import random
 import re
 import requests
@@ -115,12 +116,12 @@ async def baseprivate(c: Client, m: Message):
                 lang = get_db_general_rtb("developer")
                 n = await c.get_users(sudoers[0])
                 if lang is None:
-                    await m.reply_text(f"◍ [ᏨᎡ ᎯᏃᎽ](tg://user?id={super_sudoers[0]})\n" +
+                    await m.reply_text(f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" +
                                        f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n"
                                        "لا يوجد مطورين مرفوعين\n√",
                                        parse_mode=enums.ParseMode.MARKDOWN)
                 else:
-                    t = "\n◍ قائمة المطورين \n≪━━━━━━━━━━━━━≫\n" + f"◍ [ᏨᎡ ᎯᏃᎽ](tg://user?id={super_sudoers[0]})\n" + f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
+                    t = "\n◍ قائمة المطورين \n≪━━━━━━━━━━━━━≫\n" + f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" + f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
                     for row in lang:
                         t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
                     await m.reply_text(t, parse_mode=enums.ParseMode.MARKDOWN)
@@ -186,12 +187,12 @@ async def baseprivate(c: Client, m: Message):
                 lang = get_db_general_rtb("secdeveloper")
                 n = await c.get_users(sudoers[0])
                 if lang is None:
-                    await m.reply_text(f"◍ [ᏨᎡ ᎯᏃᎽ](tg://user?id={super_sudoers[0]})\n" +
+                    await m.reply_text(f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" +
                                        f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
                                        "لا يوجد مطورين ثانويين مرفوعين\n√",
                                        parse_mode=enums.ParseMode.MARKDOWN)
                 else:
-                    t = "\n◍ قائمة المطورين الثانويين \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n" + f"◍ [ᏨᎡ ᎯᏃᎽ](tg://user?id={super_sudoers[0]})\n" + f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
+                    t = "\n◍ قائمة المطورين الثانويين \n≪━━━━━━━crezu━━━━━━≫\n" + f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" + f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
                     for row in lang:
                         t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
                     await m.reply_text(t, parse_mode=enums.ParseMode.MARKDOWN)
@@ -278,7 +279,7 @@ async def baseprivate(c: Client, m: Message):
             if lang is None:
                 await m.reply_text("◍ لايوجد محظورين عام\n√")
             else:
-                t = "\n◍ قائمة المحظورين عام \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n"
+                t = "\n◍ قائمة المحظورين عام \n≪━━━━━━━crezu━━━━━━≫\n"
                 for row in lang:
                     t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
                 await m.reply_text(t, parse_mode=enums.ParseMode.MARKDOWN)
@@ -302,7 +303,7 @@ async def baseprivate(c: Client, m: Message):
             if lang is None:
                 await m.reply_text("◍ لا يوجد مكتومين عام\n√")
             else:
-                t = "\n◍ قائمة الكتم العام \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n"
+                t = "\n◍ قائمة الكتم العام \n≪━━━━━━━crezu━━━━━━≫\n"
                 for row in lang:
                     t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
                 await m.reply_text(t, parse_mode=enums.ParseMode.MARKDOWN)
@@ -320,37 +321,37 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
             
-    if m.text == "قفل الكيبورد ‌✯":
+    if m.text == "قفل الكيبورد":
         if secsudo(m):
             await m.reply_text("◍ تم قفل الكيبورد لفتحه مره اخري اضغط /start\n√", reply_markup= ReplyKeyboardRemove(selective=True))
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تفعيل التواصل ‌✯":
+    if m.text == "تفعيل التواصل":
         if secsudo(m):
             await lock_locksendmsg_open(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تعطيل التواصل ‌✯":
+    if m.text == "تعطيل التواصل":
         if secsudo(m):
             await lock_locksendmsg_close(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "المطورين ‌✯":
+    if m.text == "المطورين":
         if sudo2(m):
             lang = get_db_general_rtb("developer")
             n = await c.get_users(sudoers[0])
             if lang is None:
-                await m.reply_text(f"◍ [ᏨᎡ ᎯᏃᎽ](tg://user?id={super_sudoers[0]})\n" +
+                await m.reply_text(f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" +
                                        f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n"
                                    "لا يوجد مطورين مرفوعين\n√", parse_mode=enums.ParseMode.MARKDOWN)
             else:
-                t = "\n◍ قائمة المطورين \n≪━━━━━━━ᏨᎡ ᎯᏃᎽ━━━━━━≫\n" + f"◍ [ᏨᎡ ᎯᏃᎽ](tg://user?id={super_sudoers[0]})\n" + \
+                t = "\n◍ قائمة المطورين \n≪━━━━━━━crezu━━━━━━≫\n" + f"◍ [crezu](tg://user?id={super_sudoers[0]})\n" + \
                     f"◍ [{n.first_name}](tg://user?id={sudoers[0]})\n\n√"
                 for row in lang:
                     t = t + f"[{row[1]}](tg://user?id={row[0]})\n"
@@ -360,49 +361,49 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "تفعيل الاذاعه ‌✯":
+    if m.text == "تفعيل الاذاعه":
         if secsudo(m):
             await lock_lockbroadcast_close(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تعطيل الاذاعه ‌✯":
+    if m.text == "تعطيل الاذاعه":
         if secsudo(m):
             await lock_lockbroadcast_open(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تفعيل اليوتيوب ‌✯":
+    if m.text == "تفعيل اليوتيوب":
         if secsudo(m):
             await lock_lockgenyoutube_open(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تعطيل اليوتيوب ‌✯":
+    if m.text == "تعطيل اليوتيوب":
         if secsudo(m):
             await lock_lockgenyoutube_close(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تفعيل المنشن @all ‌✯":
+    if m.text == "تفعيل المنشن @all ‌":
         if secsudo(m):
             await lock_lockgenmnshn_open(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تعطيل المنشن @all ‌✯":
+    if m.text == "تعطيل المنشن @all ‌":
         if secsudo(m):
             await lock_lockgenmnshn_close(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "اذاعه بالمجموعات ‌✯" or m.text == "اذاعه بالمجموعات":
+    if m.text == "اذاعه بالمجموعات" or m.text == "اذاعه بالمجموعات":
         if secsudo(m):
             set_db_wait("gbroadcast", m.from_user.id, m.chat.id)
             await m.reply_text("◍ ارسل لى الاذاعه الان\n√")
@@ -419,7 +420,7 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطورين فقط\n√")
             return
 
-    if m.text == "اذاعه خاص ‌✯" or m.text == "اذاعه خاص":
+    if m.text == "اذاعه خاص" or m.text == "اذاعه خاص":
         if secsudo(m):
             set_db_wait("ubroadcast", m.from_user.id, m.chat.id)
             await m.reply_text("◍ ارسل لى الاذاعه الان\n√")
@@ -436,7 +437,7 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطورين فقط\n√")
             return
 
-    if m.text == "اذاعه بالتوجيه للمجموعات ⁦‌✯" or m.text == "اذاعه بالتوجيه للمجموعات":
+    if m.text == "اذاعه بالتوجيه للمجموعات" or m.text == "اذاعه بالتوجيه للمجموعات":
         if secsudo(m):
             set_db_wait("gforwardbroadcast", m.from_user.id, m.chat.id)
             await m.reply_text("◍ ارسل لى الاذاعه الان\n√")
@@ -453,7 +454,7 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطورين فقط\n√")
             return
 
-    if m.text == "اذاعه بالتوجيه خاص ‌✯" or m.text == "اذاعه بالتوجيه خاص":
+    if m.text == "اذاعه بالتوجيه" or m.text == "اذاعه بالتوجيه خاص":
         if secsudo(m):
             set_db_wait("uforwardbroadcast", m.from_user.id, m.chat.id)
             await m.reply_text("◍ ارسل لى الاذاعه الان\n√")
@@ -470,7 +471,7 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطورين فقط\n√")
             return
 
-    if m.text == "اذاعه بالتثبيت ‌✯" or m.text == "اذاعه بالتثبيت":
+    if m.text == "اذاعه بالتثبيت" or m.text == "اذاعه بالتثبيت":
         if secsudo(m):
             set_db_wait("gpinbroadcast", m.from_user.id, m.chat.id)
             await m.reply_text("◍ ارسل لى الاذاعه الان\n√")
@@ -487,7 +488,7 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطورين فقط\n√")
             return
 
-    if m.text == "اذاعه موجهه بالتثبيت ⁦‌✯" or m.text == "اذاعه موجهه بالتثبيت":
+    if m.text == "اذاعه موجهه بالتثبيت" or m.text == "اذاعه موجهه بالتثبيت":
         if secsudo(m):
             set_db_wait("uforwardpinbroadcast", m.from_user.id, m.chat.id)
             await m.reply_text("◍ ارسل لى الاذاعه الان\n√")
@@ -504,38 +505,38 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطورين فقط\n√")
             return
 
-    if m.text == "الاحصائيات ‌✯" or m.text == "الاحصائيات":
+    if m.text == "الاحصائيات" or m.text == "الاحصائيات":
         await get_num_for_user_and_group(m)
         return
 
-    if m.text == "حذف الجروبات الفيك ‌✯":
+    if m.text == "حذف الجروبات الفيك":
         if secsudo(m):
             await get_fact_num_group(m, c)
         else:
             await m.reply_text("◍ انت لست المطور\n√")
             return
-    if m.text == "حذف الاعضاء الفيك ‌✯":
+    if m.text == "حذف الاعضاء الفيك":
         if secsudo(m):
             await get_fact_num_user(m, c)
         else:
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "الجروبات ‌✯":
+    if m.text == "الجروبات":
         if secsudo(m):
             await get_num_group(m, c)
         else:
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "المشتركين ⁦‌✯":
+    if m.text == "المشتركين":
         if secsudo(m):
             await get_num_user(m)
         else:
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "قائمه الحظر العام ‌✯":
+    if m.text == "قائمه الحظر العام":
         if sudo2(m):
             lang = get_db_gban()
             if lang is None:
@@ -550,7 +551,7 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "قائمه الكتم العام ‌✯":
+    if m.text == "قائمه الكتم العام":
         if sudo2(m):
             lang = get_db_gmute()
             if lang is None:
@@ -565,21 +566,21 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "اضف رد عام ‌✯":
+    if m.text == "اضف رد عام":
         if secsudo(m):
             await addgeneralrep(m)
         else:
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "حذف رد عام ‌✯":
+    if m.text == "حذف رد عام":
         if secsudo(m):
             await delgeneralrep(m)
         else:
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "الردود العامه ‌✯" or m.text == "الردود العامه":
+    if m.text == "الردود العامه" or m.text == "الردود العامه":
         if sudo2(m):
             lang = get_db_greply()
             if lang is None:
@@ -594,67 +595,67 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ انت لست المطور\n√")
             return
 
-    if m.text == "ضع اسم للبوت ‌✯":
+    if m.text == "ضع اسم للبوت":
         if secsudo(m):
             await namebot(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "جلب نسخه احتياطيه اساسيه ‌✯":
+    if m.text == "جلب نسخه احتياطيه اساسيه":
         if secsudo(m):
             await get_backup(c, m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "جلب نسخه الردود ‌✯":
+    if m.text == "جلب نسخه الردود":
         if secsudo(m):
             await get_backup2(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "رفع نسخه احتياطيه ‌✯" or m.text == "رفع نسخه احتياطيه" and m.reply_to_message:
+    if m.text == "رفع نسخه احتياطيه" or m.text == "رفع نسخه احتياطيه" and m.reply_to_message:
         if secsudo(m):
             if m.reply_to_message.document:
                 await upper_backup(c, m)
             else:
-                await m.reply_text("◍ ◍ من فضلك قم باختيار الملف اولا\n√")
+                await m.reply_text("◍ من فضلك قم باختيار الملف اولا\n√")
                 return
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "معلومات السيرفر ‌✯":
+    if m.text == "معلومات السيرفر":
         if secsudo(m):
             await get_information_server(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "سرعه السيرفر ‌✯":
+    if m.text == "سرعه السيرفر":
         if secsudo(m):
             await test_speed(c, m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "الاصدار ⁦‌✯":
+    if m.text == "الاصدار":
         if secsudo(m):
             await get_version_source(m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "تحديث السورس ‌✯":
+    if m.text == "تحديث السورس":
         if secsudo(m):
             await upgrade(c, m)
         else:
             await m.reply_text("◍ انت لست المطور الاساسي\n√")
             return
 
-    if m.text == "رستر البوت ‌✯":
+    if m.text == "رستر البوت":
         if secsudo(m):
             await restart(c, m)
         else:
@@ -662,9 +663,10 @@ async def baseprivate(c: Client, m: Message):
             return
 
 
-########################################################################################################################
-########################################################################################################################
-
+#𝙲𝙷.𝚂𝙾𝚄𝚁𝙲𝙴 : @l2_2Y
+#𝙳𝙴𝚅 𝙰𝙱𝙳𝙾𝚘 : @II_U_6
+#𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
+#𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅
   
 
     if m.text == "تغيير المطور الاساسي" or m.text == "تغير المطور الاساسي":
@@ -676,7 +678,6 @@ async def baseprivate(c: Client, m: Message):
             await m.reply_text("◍ هذا الامر للمطور الاساسي فقط\n√")
             return
 
-        
     if m.text == "رتبتي" or m.text == "رتبتى":
         await m.reply_text("◍ رتبتك في البوت » " + await get_Rank(m))
         return
@@ -699,7 +700,7 @@ async def baseprivate(c: Client, m: Message):
                             await m.reply_text("◍ نعم حبيبى المميز 🥺❤️\n√")
                         else:
                             if get_db_botname() is None:
-                                botname = "اوليفياء"
+                                botname = "كريزي"
                             else:
                                 botname = get_db_botname()
                             await m.reply_text("اسمى " + botname + " ياحب 🙄❤️")
@@ -730,7 +731,9 @@ async def baseprivate(c: Client, m: Message):
         await command(c, m)
         return
 
-    
+    if m.text == "قرءان" or m.text == "قران" or m.text == "قرآن" or m.text == "القرآن" or m.text == "القرءان":
+        await quran(c, m)
+        return
 
     if m.text == "استوري" or m.text == "ستوري":
         await status(c, m)
@@ -808,7 +811,7 @@ async def baseprivate(c: Client, m: Message):
         return
 
     if re.match("^معني (.*)$", str(m.text)) or re.match("^معنى (.*)$", str(m.text)):
-        r = requests.get("https://leadermedo.herokuapp.com/name.php?leomedo=" + m.text[5:])
+        r = requests.get("https://leadercrezu.herokuapp.com/name.php?leocrezu=" + m.text[5:])
         rj = r.json()
         await m.reply_text(rj["meaning"])
         return
@@ -848,6 +851,10 @@ async def baseprivate(c: Client, m: Message):
     await allreply_for_bot(c, m)
 
 
+#𝙲𝙷.𝚂𝙾𝚄𝚁𝙲𝙴 : @l2_2Y
+#𝙳𝙴𝚅 𝙰𝙱𝙳𝙾𝚘 : @II_U_6
+#𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
+#𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅
     if m.text == "حظر" and m.reply_to_message:
         if secsudo(m):
             await privbanrep(m)
@@ -883,7 +890,10 @@ async def baseprivate(c: Client, m: Message):
             return
 
 
-
+#𝙲𝙷.𝚂𝙾𝚄𝚁𝙲𝙴 : @l2_2Y
+#𝙳𝙴𝚅 𝙰𝙱𝙳𝙾𝚘 : @II_U_6
+#𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
+#𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅
     if m.text == "حذف داتابيز المحظورين":
         if sudo(m):
             del_db_banallall()
@@ -966,7 +976,10 @@ async def baseprivate(c: Client, m: Message):
             return
 
 
-
+#𝙲𝙷.𝚂𝙾𝚄𝚁𝙲𝙴 : @l2_2Y
+#𝙳𝙴𝚅 𝙰𝙱𝙳𝙾𝚘 : @II_U_6
+#𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : @C6_6V1
+#𝙰𝙱𝙳𝙾𝚘 : تم التعديل بواسطة 🫧⋅
     if await lock_locksendmsg_test() and not sudo2(m):
         if m.text or m.photo or m.video or m.animation or m.audio or m.voice or m.document or m.contact or\
                 m.reply_markup or m.game:

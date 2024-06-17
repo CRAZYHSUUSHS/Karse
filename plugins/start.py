@@ -14,7 +14,7 @@ async def startsudo(c: Client, m: Message):
         t = """💌╖اهلا بيك حبيبي آلمـطـور
 ⚙️╢ تقدر تتحكم باوامر البوت عن طريق
 🔍╢ الكيبورد اللي ظهرلك تحت ↘
-🔰╜ للدخول لقناة السورس [دوس هنا](t.me/l2_2Y)"""
+🔰╜ للدخول لقناة السورس [دوس هنا](t.me/CH_CRAZ)"""
         keyboard = ReplyKeyboardMarkup(keyboard=[
             [KeyboardButton(" قفل الكيبورد")],
             [KeyboardButton("تعطيل التواصل")] +
@@ -85,7 +85,7 @@ async def start(c: Client, m: Message):
 
 @Client.on_callback_query(filters.regex("^start_back$"))
 async def start_back(c: Client, m: CallbackQuery):
-    botname = get_db_botname() or "بودا"
+    botname = get_db_botname() or "كريزي"
     x = f"""
 ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 🎤╖ أهلآ بك عزيزي أنا بوت {botname}
@@ -106,11 +106,11 @@ async def start_back(c: Client, m: CallbackQuery):
 async def infos(c: Client, m: CallbackQuery):
     res = """
 ╭──── • 𖥻 • ────╮
-𖥻 [SoUrCe BoDa](t.me/l2_2Y)
-𖥻 [GrOuP SoUrCe](t.me/CVCVCVUI)
-𖥻 [DeV SoUrCe](t.me/II_U_6)
+𖥻 [SoUrCe BoDa](t.me/CH_CRAZ)
+𖥻 [GrOuP SoUrCe](t.me/CH_CRAZ)
+𖥻 [DeV SoUrCe](t.me/CRA_NL)
 ╰──── • 𖥻 • ────╯
-𖥻 WelCoMe To SoUrCe BoDa Music .
+𖥻 WelCoMe To SoUrCe  Music .
         """
     keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton("« عوده", callback_data="start_back")]])
     await m.message.edit_text(res, reply_markup=keyboard, disable_web_page_preview=True, parse_mode=enums.ParseMode.MARKDOWN)
